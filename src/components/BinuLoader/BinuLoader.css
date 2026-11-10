@@ -1,0 +1,61 @@
+.bl-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background:
+    radial-gradient(circle at 18% 22%, rgba(31, 151, 166, 0.36), transparent 34%),
+    radial-gradient(circle at 82% 78%, rgba(193, 55, 255, 0.2), transparent 32%),
+    linear-gradient(135deg, #090b0d 0%, #111416 52%, #18131d 100%);
+  display: grid;
+  place-items: center;
+  font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+  transition: transform 0.9s cubic-bezier(0.77, 0, 0.18, 1), border-radius 0.9s;
+}
+
+.bl-leave {
+  transform: translateY(-100%);
+  border-radius: 0 0 50% 50% / 0 0 60px 60px;
+}
+
+.bl-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+  transition: opacity 0.35s;
+}
+
+.bl-leave .bl-box {
+  opacity: 0;
+}
+
+.bl-spinner {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-top-color: #1f97a6;
+  animation: bl-spin 1s linear infinite;
+}
+
+@keyframes bl-spin {
+  to { transform: rotate(360deg); }
+}
+
+.bl-text {
+  display: flex;
+  font-weight: 600;
+  font-size: 22px;
+  letter-spacing: 0.28em;
+  margin-right: -0.28em;
+}
+
+.bl-text span {
+  color: rgba(255, 255, 255, 0.42);
+  animation: bl-wave 1.4s ease-in-out infinite;
+}
+
+@keyframes bl-wave {
+  0%, 100% { color: rgba(255, 255, 255, 0.42); }
+  35%, 60% { color: #ffffff; }
+}

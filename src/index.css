@@ -3,5 +3,333 @@
 @layer base {
   body {
     font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+.mobile-menu-toggle {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .tools,
+  .certificates,
+  .kontak {
+    margin-top: 3.5rem !important;
+  }
+
+  .certificates {
+    padding-top: 1rem !important;
+  }
+
+  .proyek {
+    margin-top: 2.5rem !important;
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+
+  #about {
+    width: 100% !important;
+    margin-top: 1.5rem !important;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 1rem !important;
+  }
+
+  #about > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  #about > div > div:first-child {
+    order: 2;
+    flex: 0 0 auto;
+    width: 100%;
+    padding: 0.75rem 0.5rem 0;
+    border-bottom: 0;
+    border-right: 0;
+    text-align: center;
+  }
+
+  #about > div > div:last-child {
+    order: 1;
+    flex: 0 0 auto;
+    width: 100%;
+    padding-left: 0;
+    overflow: visible;
+  }
+
+  #about h2 {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  #about p {
+    font-size: 0.72rem;
+    line-height: 1.45;
+    margin-bottom: 1rem;
+  }
+
+  #about canvas {
+    display: block;
+    width: 100%;
+    max-width: 170px;
+    height: auto;
+    margin: 0 auto;
+    transform: scale(1.76);
+    transform-origin: center;
+  }
+
+  .mobile-menu-toggle {
+    position: absolute;
+    top: 0.85rem;
+    right: 0.75rem;
+    z-index: 2;
+    display: flex;
+    width: 2.35rem;
+    height: 2.1rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.28rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 0.55rem;
+    background: rgba(15, 23, 42, 0.72);
+    backdrop-filter: blur(10px);
+  }
+
+  .mobile-menu-toggle span {
+    display: block;
+    width: 1.1rem;
+    height: 2px;
+    border-radius: 999px;
+    background: white;
+  }
+
+  .navbar-menu {
+    display: none !important;
+  }
+
+  .navbar-menu.is-open {
+    position: absolute;
+    top: 3.35rem;
+    right: 0.75rem;
+    display: flex !important;
+    width: max-content;
+    min-width: 9rem;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 0.45rem;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 0.8rem;
+    background: rgba(15, 23, 42, 0.94);
+    box-shadow: 0 16px 35px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(16px);
+  }
+
+  .navbar-menu.is-open li a {
+    display: block;
+    padding: 0.55rem 0.8rem;
+    font-size: 0.75rem;
+  }
+
+  .hero {
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .hero h1 {
+    margin-bottom: 1rem;
+    font-size: clamp(1.1rem, 5vw, 1.6rem);
+    line-height: 1.05;
+  }
+
+  .hero p {
+    font-size: 0.64rem;
+    line-height: 1.45;
+  }
+
+  .hero .music-player {
+    gap: 0.4rem;
+    padding: 0.25rem 0.55rem;
+  }
+
+  .hero .play-button {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .hero .music-label {
+    font-size: 0.65rem;
+  }
+
+  .hero .image-profile-card {
+    width: 100%;
+    border-radius: 18px;
+    transform: scale(1.2);
+    transform-origin: center;
+  }
+
+  .hero .image-stack {
+    inset: 8px;
+  }
+
+  .hero .image-profile-info {
+    right: 8px;
+    bottom: 8px;
+    left: 8px;
+    gap: 1px;
+    padding: 5px 6px;
+    border-radius: 7px;
+  }
+
+  .hero .image-profile-info strong {
+    font-size: 0.48rem;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+  }
+
+  .hero .image-profile-info span {
+    font-size: 0.45rem;
+    line-height: 1.1;
+  }
+
+  .hero .flex.flex-col.sm\:flex-row {
+    gap: 0.5rem;
+  }
+
+  .hero-actions {
+    grid-column: 1 / -1;
+    width: 100%;
+    gap: 0.5rem;
+  }
+
+  .hero-actions a {
+    width: 0;
+    flex: 1 1 0;
+    justify-content: center;
+    text-align: center;
+    padding: 0.65rem 0.5rem;
+    font-size: 0.65rem;
+  }
+
+  .navbar {
+    padding-top: 0.75rem !important;
+    padding-bottom: 0.75rem !important;
+  }
+
+  .navbar > div {
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+    gap: 0.35rem !important;
+  }
+
+  .navbar .logo h1 {
+    font-size: 1.25rem;
+  }
+
+  .navbar ul {
+    width: 100%;
+    gap: 0.6rem 0.85rem;
+  }
+
+  .navbar ul a {
+    font-size: 0.68rem;
+  }
+
+  .music-player {
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .music-label {
+    font-size: 0.75rem;
+  }
+
+  .tools-box > div {
+    min-width: 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.55rem 0.25rem;
+    text-align: center;
+  }
+
+  .tools > h1 {
+    font-size: 1.55rem;
+    line-height: 1.15;
+  }
+
+  .tools > p {
+    font-size: 0.7rem;
+  }
+
+  .certificates h1,
+  .proyek + h1 {
+    font-size: 1.55rem;
+    line-height: 1.15;
+  }
+
+  .certificates > p,
+  .proyek + h1 + p {
+    font-size: 0.7rem;
+    line-height: 1.45;
+  }
+
+  .kontak h1 {
+    font-size: 1.55rem;
+    line-height: 1.15;
+  }
+
+  .kontak > p {
+    font-size: 0.7rem;
+    line-height: 1.45;
+  }
+
+  .tools-box > div img {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .tools-box > div > div {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .tools-box > div p,
+  .tools-box > div .truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+  }
+
+  .tools-box > div .truncate {
+    display: flex;
+    min-height: 2.2em;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.4rem;
+    line-height: 1.1;
+  }
+
+  .tools-box > div .truncate > * {
+    font-size: 0.4rem !important;
+    line-height: 1.1 !important;
+  }
+
+  .tools-box > div p {
+    font-size: 0.38rem;
+    line-height: 1.1;
+  }
+
+  .kontak a {
+    max-width: 100%;
+    padding: 1rem 1.25rem;
   }
 }

@@ -1,0 +1,44 @@
+.music-player {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgb(39 39 42);
+    width: fit-content;
+    padding: 5px 16px;
+    border-radius: 16px;
+    margin-bottom: 24px;
+    transition: all 0.3s ease;
+}
+
+.music-player:hover {
+    background: rgb(63 63 70);
+}
+
+.play-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.play-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.play-button:active {
+    transform: scale(0.95);
+}
+
+.music-label {
+    color: #e5e7eb;
+    font-size: 14px;
+    font-weight: 500;
+}

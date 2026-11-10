@@ -50,7 +50,7 @@ const ProfileCardComponent = ({
   handle = "javicodes",
   status = "Online",
   contactText = "Contact",
-  showUserInfo = true,
+  showUserInfo = false,
   onContactClick,
 }) => {
   const wrapRef = useRef(null);
@@ -337,12 +337,7 @@ const ProfileCardComponent = ({
               </div>
             )}
           </div>
-          <div className="pc-content">
-            <div className="pc-details">
-              <h3>{name}</h3>
-              <p>{title}</p>
-            </div>
-          </div>
+          {/* Removed text elements - only showing image */}
         </div>
       </section>
     </div>

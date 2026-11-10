@@ -1,14 +1,15 @@
 {
   "name": "portofolio",
-  "homepage": "https://rissss21.github.io/portofolio",
+  "homepage": "https://dtrbinu-cloud.github.io/portofolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && cp dist/index.html dist/404.html",
+    "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
@@ -29,7 +30,8 @@
     "remixicon": "^4.6.0",
     "tailwind-scrollbar-hide": "^4.0.0",
     "tailwindcss": "^4.1.11",
-    "three": "^0.167.1"
+    "three": "^0.167.1",
+    "three-globe": "^2.45.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.33.0",
